@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form action="" class="form-inline" (ngSubmit)= "addTask()" #taskForm="ngForm">
+                <div class="form-group">
+                    <label for="content-field" class="sr-only"></label>
+                    <input type="text" id = "content-field" class="form-control" required placeholder="Enter a Task.." [(ngModel)]= "currentTask.content" name="content" >
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="taskForm.form.invalid">Add Task</button>
+               <!Content:{{ currentTask.content }} >
+            </form>
+        </div>
+    </div>
+    <app-card *ngFor = "let uno of unos "[uno] = "uno"></app-card>
+</div>

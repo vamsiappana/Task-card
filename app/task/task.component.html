@@ -1,0 +1,11 @@
+<div class="col-sm-3">
+    <div class="card" (click)= "statusToggle()" [class.completed]= "uno.completed">
+        <div class="card-block">
+            <p>{{ uno.content }}</p>
+        </div>
+        <div class="card-footer">
+            <p *ngIf="!uno.completed">Not Completed</p>
+            <p *ngIf="uno.completed">Completed</p>
+        </div>
+    </div>
+</div>
